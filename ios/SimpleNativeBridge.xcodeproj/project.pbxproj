@@ -37,8 +37,8 @@
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
-		DE344CE72063DC7D00AA38D8 /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE344CE62063DC7D00AA38D8 /* CalendarManager.swift */; };
-		DE344D1F2063DCE300AA38D8 /* CalendarManagerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = DE344D1E2063DCE300AA38D8 /* CalendarManagerBridge.m */; };
+		DE344CE72063DC7D00AA38D8 /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE344CE62063DC7D00AA38D8 /* MessageManager.swift */; };
+		DE344D1F2063DCE300AA38D8 /* MessageManagerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = DE344D1E2063DCE300AA38D8 /* MessageManagerBridge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -345,8 +345,8 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		DE344CE52063DC7C00AA38D8 /* SimpleNativeBridge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleNativeBridge-Bridging-Header.h"; sourceTree = "<group>"; };
-		DE344CE62063DC7D00AA38D8 /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalendarManager.swift; path = SimpleNativeBridge/CalendarManager.swift; sourceTree = "<group>"; };
-		DE344D1E2063DCE300AA38D8 /* CalendarManagerBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CalendarManagerBridge.m; path = SimpleNativeBridge/CalendarManagerBridge.m; sourceTree = "<group>"; };
+		DE344CE62063DC7D00AA38D8 /* MessageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MessageManager.swift; path = SimpleNativeBridge/MessageManager.swift; sourceTree = "<group>"; };
+		DE344D1E2063DCE300AA38D8 /* MessageManagerBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MessageManagerBridge.m; path = SimpleNativeBridge/MessageManagerBridge.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -612,8 +612,8 @@
 			isa = PBXGroup;
 			children = (
 				DE344CE52063DC7C00AA38D8 /* SimpleNativeBridge-Bridging-Header.h */,
-				DE344CE62063DC7D00AA38D8 /* CalendarManager.swift */,
-				DE344D1E2063DCE300AA38D8 /* CalendarManagerBridge.m */,
+				DE344CE62063DC7D00AA38D8 /* MessageManager.swift */,
+				DE344D1E2063DCE300AA38D8 /* MessageManagerBridge.m */,
 			);
 			name = Calendar;
 			sourceTree = "<group>";
@@ -1131,8 +1131,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE344D1F2063DCE300AA38D8 /* CalendarManagerBridge.m in Sources */,
-				DE344CE72063DC7D00AA38D8 /* CalendarManager.swift in Sources */,
+				DE344D1F2063DCE300AA38D8 /* MessageManagerBridge.m in Sources */,
+				DE344CE72063DC7D00AA38D8 /* MessageManager.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);

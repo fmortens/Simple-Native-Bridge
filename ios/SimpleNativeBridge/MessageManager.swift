@@ -8,13 +8,12 @@
 
 import Foundation
 
-@objc(CalendarManager)
-class CalendarManager: NSObject {
+@objc(MessageManager)
+class MessageManager: NSObject {
   
-  @objc(addEvent:location:date:)
-  func addEvent(name: String, location: String, date: NSNumber) -> Void {
-    // Date is ready to use!
-    print("addEvent was called with \(name) and \(location)")
+  @objc(updateMessage:)
+  func updateMessage(message: String) -> Void {
+    print("updateMessage was called with \(message)")
   }
   
   @objc

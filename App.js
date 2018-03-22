@@ -7,33 +7,31 @@ import {
 } from 'react-native';
 import {NativeModules} from 'react-native';
 
-const CalendarManager = NativeModules.CalendarManager;
+const MessageManager = NativeModules.MessageManager;
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.addEvent = this.addEvent.bind(this);
+    this.updateMessage = this.updateMessage.bind(this);
   }
 
   componentWillMount() {
-    this.exportedConstants = CalendarManager.someKey;
+    this.exportedConstants = MessageManager.someKey;
   }
 
   render() {
     return (
       <View style={styles.container}>
         <Text>{this.exportedConstants}</Text>
-        <Button title="Add event" onPress={this.addEvent} />
+        <Button title="Log time" onPress={this.updateMessage} />
       </View>
     );
   }
 
-  addEvent() {
-    CalendarManager.addEvent(
-      'Birthday Party',
-      '4 Privet Drive, Surrey',
-      new Date().getTime()
+  updateMessage() {
+    MessageManager.updateMessage(
+      new Date().toTimeString()
     );
   }
 }
