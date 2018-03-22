@@ -16,9 +16,14 @@ export default class App extends React.Component {
     this.addEvent = this.addEvent.bind(this);
   }
 
+  componentWillMount() {
+    this.exportedConstants = CalendarManager.someKey;
+  }
+
   render() {
     return (
       <View style={styles.container}>
+        <Text>{this.exportedConstants}</Text>
         <Button title="Add event" onPress={this.addEvent} />
       </View>
     );

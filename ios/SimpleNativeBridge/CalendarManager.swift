@@ -12,11 +12,7 @@ import Foundation
 class CalendarManager: NSObject {
   
   @objc(addEvent:location:date:)
-  func addEvent(
-    name: String,
-    location: String,
-    date: NSNumber
-  ) -> Void {
+  func addEvent(name: String, location: String, date: NSNumber) -> Void {
     // Date is ready to use!
     print("addEvent was called with \(name) and \(location)")
   }
