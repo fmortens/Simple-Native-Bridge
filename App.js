@@ -3,7 +3,8 @@ import {
   StyleSheet,
   Text,
   View,
-  Button
+  Button,
+  StatusBar
 } from 'react-native';
 import {NativeModules} from 'react-native';
 
@@ -14,6 +15,10 @@ export default class App extends React.Component {
     super(props);
 
     this.updateMessage = this.updateMessage.bind(this);
+
+    this.state = {
+      statusBarStyle: 'light-content'
+    }
   }
 
   componentWillMount() {
@@ -23,6 +28,9 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <StatusBar
+          barStyle={this.state.statusBarStyle}
+        />
         <Text>{this.exportedConstants}</Text>
         <Button title="Log time" onPress={this.updateMessage} />
       </View>
@@ -33,6 +41,10 @@ export default class App extends React.Component {
     MessageManager.updateMessage(
       new Date().toTimeString()
     );
+
+    this.setState({
+      statusBarStyle: this.state.statusBarStyle === 'dark-content' ? 'light-content' : 'dark-content'
+    });
   }
 }
 
